@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "importHelpers": false,
+    "removeComments": true,
+    "target": "ES2015",
+    "module": "ES2015",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": false,
+    "outDir": "./docs"
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "include": [
+    "./src/*.ts",
+    "src/toc.ts",
+    "src/pagination.ts"
+  ]
+}

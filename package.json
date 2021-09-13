@@ -1,0 +1,19 @@
+{
+  "displayName": "A brief introduction to the amazing world of SVG and why we don't go there",
+  "name": "intro-to-svg",
+  "version": "0.0.1",
+  "scripts": {
+    "style": "sass --watch ./src/index.scss:./docs/index.css",
+    "build": "tsc --watch"
+  },
+  "author": {
+    "name": "Oded Sharon",
+    "email": "odedshr@gmail.com"
+  },
+  "dependencies": {
+    "gsap": "^3.7.1",
+    "node-sass": "^6.0.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2"
+  }
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 400 400">
+	<style>
+		.triangle {
+		fill: transparent;
+		stroke-width: 30;
+		stroke: red;
+		filter: url(#fancy-goo);
+		stroke-dasharray: 20 10;
+		}
+		
+		.circles {
+		filter: url("#fancy-goo");
+		}
+		
+		.draggable {
+		cursor: grab;
+		}
+		
+		.draggable[dragged] {
+		cursor: grabbed;
+		}
+		
+		.texts text {
+		fill: white;
+		font-size: 14px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		text-transform: uppercase;
+		user-select: none;
+		}
+	</style>
+	<defs>
+		<filter id="fancy-goo">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			<feComposite in="SourceGraphic" in2="goo" operator="atop" />
+		</filter>
+	</defs>
+	<polygon points="100, 300 200,150 300,300" class="triangle" />
+	<g class="circles">
+		<circle aria-labelledby="textReq" class="draggable" cx="100" cy="300" r="60" stroke="black" fill="black" />
+		<circle aria-labelledby="textRes" class="draggable" cx="200" cy="150" r="60" stroke="black" fill="black" />
+		<circle aria-labelledby="textDead" class="draggable" cx="300" cy="300" r="60" stroke="black" fill="black" />
+	</g>
+	<g class="texts">
+		<text id="textReq" x="100" y="300" text-anchor="middle">
+			Requirements
+		</text>
+		<text id="textRes" x="200" y="150" text-anchor="middle">
+			Resources
+		</text>
+		<text id="textDead" x="300" y="300" text-anchor="middle">
+			Deadline
+		</text>
+	</g>
+</svg>
